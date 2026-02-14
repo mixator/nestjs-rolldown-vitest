@@ -1,9 +1,9 @@
-import { defineConfig } from 'vitest/config';
-import oxc from 'unplugin-oxc/vite';
+import { defineConfig } from "vitest/config";
+import oxc from "unplugin-oxc/vite";
 
 export default defineConfig({
   test: {
-    environment: 'node',
+    environment: "node",
   },
   plugins: [
     oxc({

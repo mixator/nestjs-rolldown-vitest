@@ -1,6 +1,6 @@
-import { ValidationPipe } from '@nestjs/common';
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module.js';
+import { ValidationPipe } from "@nestjs/common";
+import { NestFactory } from "@nestjs/core";
+import { AppModule } from "./app.module.js";
 
 declare const module: any;
 
@@ -17,10 +17,10 @@ async function bootstrap() {
   }
 }
 bootstrap()
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
     process.exit(1);
   })
   .finally(() => {
-    console.log('Application stopped');
+    console.log("Application stopped");
   });

@@ -1,10 +1,10 @@
-import { Test } from '@nestjs/testing';
-import { CatsController } from './cats.controller.js';
-import { CatsService } from './cats.service.js';
-import { Cat } from './interfaces/cat.interface.js';
-import { expect, describe, beforeEach, it } from 'vitest';
+import { Test } from "@nestjs/testing";
+import { CatsController } from "./cats.controller.js";
+import { CatsService } from "./cats.service.js";
+import { Cat } from "./interfaces/cat.interface.js";
+import { expect, describe, beforeEach, it } from "vitest";
 
-describe('CatsController', () => {
+describe("CatsController", () => {
   let catsController: CatsController;
   let catsService: CatsService;
 
@@ -18,13 +18,13 @@ describe('CatsController', () => {
     catsController = moduleRef.get<CatsController>(CatsController);
   });
 
-  describe('findAll', () => {
-    it('should return an array of cats', async () => {
+  describe("findAll", () => {
+    it("should return an array of cats", async () => {
       const cats: Cat[] = [
         {
           age: 2,
-          breed: 'Bombay',
-          name: 'Pixel',
+          breed: "Bombay",
+          name: "Pixel",
         },
       ];
       // @ts-expect-error CatsService.cats is any
@@ -36,12 +36,12 @@ describe('CatsController', () => {
     });
   });
 
-  describe('create', () => {
-    it('should add a new cat', async () => {
+  describe("create", () => {
+    it("should add a new cat", async () => {
       const cat: Cat = {
         age: 2,
-        breed: 'Bombay',
-        name: 'Pixel',
+        breed: "Bombay",
+        name: "Pixel",
       };
       const expectedCatArray = [cat];
 
