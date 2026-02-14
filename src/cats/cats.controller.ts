@@ -6,7 +6,7 @@ import { ParseIntPipe } from "#root/common/pipes/parse-int.pipe.js";
 import { CreateCatDto } from "./dto/create-cat.dto.js";
 import { CatsService } from "./cats.service.js";
 
-// @UseGuards(RolesGuard)
+@UseGuards(RolesGuard)
 @Controller("cats")
 export class CatsController {
   constructor(private readonly catsService: CatsService) {}
