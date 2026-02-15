@@ -30,8 +30,6 @@ describe("CatsController", () => {
       // @ts-expect-error CatsService.cats is any
       catsService.cats = cats;
 
-      console.log(catsController);
-
       expect(await catsController.findAll()).toBe(cats);
     });
   });
